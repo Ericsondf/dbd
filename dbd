@@ -1,0 +1,25 @@
+//Definiçao das tabelas
+
+Table HEROI{
+id integer [primary key]//identificador unico cada cliente
+nome varchar // Nome do heroi varchar(texto) lulu
+real_name varchar //Nome do cliente Lucas
+power_level integer //
+}
+
+table time {
+id integer [primary key]
+nome varchar // nome da equipe
+base varchar // localizaçao
+
+}
+
+Table heroias_times{
+
+  herois_id integer [not null]
+  time_id integer [not null]
+
+}
+
+ref herois_time: heroias_times.herois_id > herois.id
+ref herois_time: heroias_times.time_id
